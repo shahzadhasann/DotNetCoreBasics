@@ -4,5 +4,25 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h1>This is my Category page</h1>
+<h1>Category List</h1>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.CategoryList)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.Name</td>
+            </tr>
+        }
+       
+    </tbody>
+
+</table>
 
